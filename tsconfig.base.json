@@ -14,7 +14,9 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@drewk/react-ui/navbar": ["libs/react-ui/navbar/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }

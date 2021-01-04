@@ -1,7 +1,32 @@
 {
   "version": 2,
-
-  "projects": {},
+  "projects": {
+    "react-ui-navbar": {
+      "root": "libs/react-ui/navbar",
+      "sourceRoot": "libs/react-ui/navbar/src",
+      "projectType": "library",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/react-ui/navbar/**/*.{ts,tsx,js,jsx}"
+            ]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": [
+            "coverage/libs/react-ui/navbar"
+          ],
+          "options": {
+            "jestConfig": "libs/react-ui/navbar/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    }
+  },
   "cli": {
     "defaultCollection": "@nrwl/workspace"
   }
