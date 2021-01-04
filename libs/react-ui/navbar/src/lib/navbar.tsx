@@ -1,3 +1,4 @@
+import { AppBar, Toolbar } from '@material-ui/core';
 import React from 'react';
 
 /* eslint-disable-next-line */
@@ -5,9 +6,9 @@ export interface NavbarProps {}
 
 export function Navbar(props: NavbarProps) {
   return (
-    <div>
-      <h1>Welcome to react-ui-navbar!</h1>
-    </div>
+    <AppBar position="static">
+      <Toolbar></Toolbar>
+    </AppBar>
   );
 }
 

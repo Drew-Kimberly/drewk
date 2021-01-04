@@ -27,6 +27,13 @@
   "projects": {
     "react-ui-navbar": {
       "tags": []
+    },
+    "blog": {
+      "tags": []
+    },
+    "blog-e2e": {
+      "tags": [],
+      "implicitDependencies": ["blog"]
     }
   }
 }

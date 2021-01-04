@@ -1,1 +1,1 @@
-export * from './lib/react-ui-navbar';
+export * from './lib/navbar';
