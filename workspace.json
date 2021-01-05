@@ -176,6 +176,16 @@
               }
             ]
           }
+        },
+        "lint-autogeneration": {
+          "executor": "@nrwl/workspace:run-commands",
+          "options": {
+            "commands": [
+              {
+                "command": "ts-node libs/react-ui/icons/scripts/lint-icons"
+              }
+            ]
+          }
         }
       }
     }
