@@ -15,7 +15,9 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@drewk/react-ui/navbar": ["libs/react-ui/navbar/src/index.ts"]
+      "@drewk/react-ui/navbar": ["libs/react-ui/navbar/src/index.ts"],
+      "@drewk/shared/assets": ["libs/shared/assets/src/index.ts"],
+      "@drewk/react-ui/icons": ["libs/react-ui/icons/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

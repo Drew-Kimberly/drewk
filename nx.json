@@ -26,14 +26,21 @@
   },
   "projects": {
     "react-ui-navbar": {
-      "tags": []
+      "tags": ["type:ui"]
     },
     "blog": {
-      "tags": []
+      "tags": [],
+      "implicitDependencies": ["shared-assets"]
     },
     "blog-e2e": {
       "tags": [],
       "implicitDependencies": ["blog"]
+    },
+    "shared-assets": {
+      "tags": ["type:util"]
+    },
+    "react-ui-icons": {
+      "tags": ["type:ui"]
     }
   }
 }

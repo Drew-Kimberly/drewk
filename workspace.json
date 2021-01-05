@@ -43,8 +43,12 @@
             "polyfills": "apps/blog/src/polyfills.ts",
             "tsConfig": "apps/blog/tsconfig.app.json",
             "assets": [
-              "apps/blog/src/favicon.ico",
-              "apps/blog/src/assets"
+              "apps/blog/src/assets",
+              {
+                "input": "libs/shared/assets/src",
+                "glob": "favicon.ico",
+                "output": "assets"
+              }
             ],
             "styles": [],
             "scripts": [],
@@ -129,6 +133,47 @@
           "options": {
             "lintFilePatterns": [
               "apps/blog-e2e/**/*.{js,ts}"
+            ]
+          }
+        }
+      }
+    },
+    "shared-assets": {
+      "root": "libs/shared/assets",
+      "sourceRoot": "libs/shared/assets/src",
+      "projectType": "library",
+      "targets": {}
+    },
+    "react-ui-icons": {
+      "root": "libs/react-ui/icons",
+      "sourceRoot": "libs/react-ui/icons/src",
+      "projectType": "library",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/react-ui/icons/**/*.{ts,tsx,js,jsx}"
+            ]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": [
+            "coverage/libs/react-ui/icons"
+          ],
+          "options": {
+            "jestConfig": "libs/react-ui/icons/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "generate-icons": {
+          "executor": "@nrwl/workspace:run-commands",
+          "options": {
+            "commands": [
+              {
+                "command": "ts-node libs/react-ui/icons/scripts/generate-icons --create-icon-source ../../createIcon --glob-patterns libs/react-ui/icons/src/lib/**/"
+              }
             ]
           }
         }

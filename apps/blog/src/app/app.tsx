@@ -1,15 +1,18 @@
 import React from 'react';
+import { Route, Link, useHistory } from 'react-router-dom';
 
-import { ReactComponent as Logo } from './logo.svg';
-import star from './star.svg';
 import { Navbar } from '@drewk/react-ui/navbar';
 
-import { Route, Link } from 'react-router-dom';
-
 export function App() {
+  const history = useHistory();
+
+  const onHomeClick = () => {
+    history.push('/');
+  };
+
   return (
     <>
-      <Navbar></Navbar>
+      <Navbar appName="Blog" onHomeClick={onHomeClick}></Navbar>
       <h1>
         <br />
         <hr />

@@ -12,6 +12,7 @@
             "enforceBuildableLibDependency": true,
             "allow": [],
             "depConstraints": [
+              { "sourceTag": "type:ui", "onlyDependOnLibsWithTags": ["type:ui", "type:util"] },
               { "sourceTag": "*", "onlyDependOnLibsWithTags": ["*"] }
             ]
           }
